@@ -13,11 +13,13 @@ https://github.com/GoogleCloudDataproc/initialization-actions/blob/master/oozie/
 """
 
 
-def create_dataproc_config(project_id, cluster_name, region):
+def create_dataproc_config(project_id, cluster_name, region, staging_bucket=None, tmp_bucket=None):
     return {
         "project_id": project_id,
         "cluster_name": cluster_name,
         "config": {
+            "config_bucket": staging_bucket,
+            "temp_bucket": tmp_bucket,
             "master_config": {
                 "num_instances": 1,
                 "machine_type_uri": "n1-standard-1",
@@ -41,7 +43,7 @@ def create_dataproc_config(project_id, cluster_name, region):
                 },
                 "optional_components": [
                     Component.ANACONDA,
-                    #Component.JUPYTER,
+                    # Component.JUPYTER,
                     Component.ZEPPELIN,
                     Component.ZOOKEEPER,
                     Component.SOLR
