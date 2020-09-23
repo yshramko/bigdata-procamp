@@ -9,6 +9,7 @@ This is a repository that contains:
 
 Pre-requisites:
 - install [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstart)
+- [setup service account with enough permissions](https://cloud.google.com/docs/authentication/production#passing_variable) 
 - Python >= 3.6
 
 Execute from command line in project root:
