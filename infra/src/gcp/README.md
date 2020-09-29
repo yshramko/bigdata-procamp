@@ -1,5 +1,10 @@
 ## GCP infrastructure
 
+### Prerequisites
+python 2.7
+pip
+Google SDK
+
 ### Google Cloud Dataproc
 
 - Cluster creation example
