@@ -38,6 +38,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Prerequisites
+python 2.7
+pip
+Google SDK
+
 ### Google Cloud Dataproc
 
 - Cluster creation example
