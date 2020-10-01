@@ -34,14 +34,10 @@ Pre-requisites:
 Execute from command line in project root:
 ```$bash
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate # or on Windows execute .venv/Scripts/activate.bat
 pip install -r requirements.txt
 ```
 
-### Prerequisites
-python 2.7
-pip
-Google SDK
 
 ### Google Cloud Dataproc
 
