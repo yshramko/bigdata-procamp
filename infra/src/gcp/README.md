@@ -11,12 +11,12 @@ from Google Cloud Shell.
 ### Google Cloud Shell installation
 1. Activate Google Cloud Shell
 2. [Download this project](https://cloud.google.com/shell/docs/uploading-and-downloading-files) into cloud shell machine
-by zipping the project folder and uploading it directly or via `git clone`
+by zipping the project folder and uploading it directly or via `git clone https://github.com/gl-bigdata-procamp/bigdata-procamp.git`
 3. Install Python3 on Google Cloud Shell
 ```bash
 sudo apt update
 sudo apt install python3 python3-dev python3-venv
-cd <project-root>
+cd bigdata-procamp
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
