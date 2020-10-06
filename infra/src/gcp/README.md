@@ -15,7 +15,7 @@ by zipping the project folder and uploading it directly or via `git clone https:
 3. Install Python3 on Google Cloud Shell
 ```bash
 sudo apt update
-sudo apt install python3 python3-dev python3-venv
+sudo apt install python3 python3-dev python3-venv -y
 cd bigdata-procamp
 python3 -m venv .venv
 source .venv/bin/activate
