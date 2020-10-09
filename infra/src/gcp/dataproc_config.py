@@ -22,17 +22,27 @@ def create_dataproc_config(project_id, cluster_name, region, staging_bucket=None
             "temp_bucket": tmp_bucket,
             "master_config": {
                 "num_instances": 1,
-                "machine_type_uri": "n1-standard-1",
+                "machine_type_uri": "n2-standard-8",
                 "disk_config": {
-                    "boot_disk_size_gb": 50,
+                    "boot_disk_size_gb": 500,
                     "num_local_ssds": 0
                 }
             },
+            "gce_cluster_config": {
+                "zone_uri": f"https://www.googleapis.com/compute/v1/projects/{project_id}/zones/{region}-a",
+                "service_account_scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform",
+                    "https://www.googleapis.com/auth/cloud.useraccounts.readonly",
+                    "https://www.googleapis.com/auth/devstorage.read_write",
+                    "https://www.googleapis.com/auth/logging.write"
+                ],
+                "subnetwork_uri": f"https://www.googleapis.com/compute/v1/projects/{project_id}/regions/{region}/subnetworks/default"
+            },
             "worker_config": {
                 "num_instances": 2,
-                "machine_type_uri": "n1-standard-1",
+                "machine_type_uri": "n2-standard-8",
                 "disk_config": {
-                    "boot_disk_size_gb": 50,
+                    "boot_disk_size_gb": 500,
                     "num_local_ssds": 0
                 }
             },
