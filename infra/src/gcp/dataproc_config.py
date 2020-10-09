@@ -36,6 +36,10 @@ def create_dataproc_config(project_id, cluster_name, region, staging_bucket=None
                     "https://www.googleapis.com/auth/devstorage.read_write",
                     "https://www.googleapis.com/auth/logging.write"
                 ],
+                "metadata": {
+                    "run-on-master": "true",
+                    "kafka-enable-jmx": "true"
+                },
                 "subnetwork_uri": f"https://www.googleapis.com/compute/v1/projects/{project_id}/regions/{region}/subnetworks/default"
             },
             "worker_config": {
@@ -62,6 +66,14 @@ def create_dataproc_config(project_id, cluster_name, region, staging_bucket=None
             "initialization_actions": [
                 {
                     "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/kafka/kafka.sh',
+                    "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
+                },
+                {
+                    "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/kafka/kafka-manager.sh',
+                    "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
+                },
+                {
+                    "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/kafka/cruise-control.sh',
                     "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
                 },
                 {
