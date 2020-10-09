@@ -1,0 +1,1 @@
+gcloud dataproc jobs submit pyspark lab1.py --cluster=test-procamp-cli2 --region=us-central1 -- procamp_labs_materials

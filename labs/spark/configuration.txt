@@ -1,0 +1,5 @@
+## Create cluster Windows
+gcloud dataproc clusters create test-procamp-cli2 --optional-components=ZEPPELIN --enable-component-gateway --region us-central1 --subnet default --zone us-central1-c --master-machine-type n1-standard-1 --master-boot-disk-size 50 --num-workers 2 --worker-machine-type n1-standard-1 --worker-boot-disk-size 50 --image-version 1.5-debian10 --max-idle 18000s --scopes https://www.googleapis.com/auth/cloud-platform --tags spark-labs --project bigdata-procamp-env
+
+## Create cluster Linux
+gcloud dataproc clusters create test-procamp-cli --optional-components=ZEPPELIN --enable-component-gateway --region us-central1 --subnet default --zone us-central1-c --master-machine-type n1-standard-1 --master-boot-disk-size 50 --num-workers 2 --worker-machine-type n1-standard-1 --worker-boot-disk-size 50 --image-version 1.5-debian10 --max-idle 18000s --scopes 'https://www.googleapis.com/auth/cloud-platform' --tags spark-labs --project bigdata-procamp-env
