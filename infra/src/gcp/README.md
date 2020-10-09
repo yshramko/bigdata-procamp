@@ -23,7 +23,10 @@ pip3 install --upgrade pip
 python3 -m pip install --upgrade setuptools
 pip install -r requirements.txt
 ```
-
+Later on (if you use Cloud Shell) at the beginning of each activated session execute:
+```baash
+gcloud config set project [PROJECT_ID]
+```
 ### Installation on your local machine
 
 Pre-requisites:
@@ -40,7 +43,6 @@ pip install -r requirements.txt
 
 
 ### Google Cloud Dataproc
-
 - Cluster creation example
 ```bash
 python dataproc.py create-cluster --project-id bigdata-procamp-env --region us-central1 --cluster-name test1 --create-buckets
