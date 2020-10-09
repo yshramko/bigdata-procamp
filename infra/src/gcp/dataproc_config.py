@@ -69,14 +69,6 @@ def create_dataproc_config(project_id, cluster_name, region, staging_bucket=None
                     "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
                 },
                 {
-                    "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/kafka/kafka-manager.sh',
-                    "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
-                },
-                {
-                    "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/kafka/cruise-control.sh',
-                    "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
-                },
-                {
                     "executable_file": f'gs://goog-dataproc-initialization-actions-{region}/oozie/oozie.sh',
                     "execution_timeout": Duration().FromTimedelta(timedelta(minutes=10))
                 }
