@@ -47,7 +47,7 @@ After you install Cloud SDK, the next step is to run the `gcloud init` command t
 
 ## Create Google Cloud Project
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fadruzenko%2Fbigdata-procamp&cloudshell_git_branch=infra&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fgl-bigdata-procamp%2Fbigdata-procamp&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
 
 1. Configure the environment for Terraform
 
@@ -86,9 +86,9 @@ tfstate_bucket = tf-state-bucket-123b55b12345679e
 ```
 Write down `project_id` and `tfstate_bucket` variables for further usage during Dataproc and Composer clusters setup.
 
-### Create Dataproc cluster
+## Create Dataproc cluster
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fadruzenko%2Fbigdata-procamp&cloudshell_git_branch=infra&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fgl-bigdata-procamp%2Fbigdata-procamp&&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
 
 1. Navigate to terraform `dataproc` folder
 
@@ -118,9 +118,9 @@ terraform init -backend-config="bucket=TFSTATE_BUCKET"
 terraform apply
 ```
 
-### Create Composer cluster
+## Create Composer cluster
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fadruzenko%2Fbigdata-procamp&cloudshell_git_branch=infra&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fgl-bigdata-procamp%2Fbigdata-procamp&cloudshell_open_in_editor=terraform%2Fdataproc%2Fdataproc.tf&cloudshell_working_dir=infra&cloudshell_tutorial=README.md)
 
 1. Navigate to terraform `composer` folder
 
