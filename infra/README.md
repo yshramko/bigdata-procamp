@@ -72,6 +72,9 @@ export TF_VAR_billing_account=YOUR_ACCOUNT_ID
 
 ```sh
 cd terraform/project
+```
+
+```sh
 terraform init
 terraform apply
 ```
@@ -85,6 +88,12 @@ project_id = bigdata-procamp-d88877aa
 tfstate_bucket = tf-state-bucket-123b55b12345679e
 ```
 Write down `project_id` and `tfstate_bucket` variables for further usage during Dataproc and Composer clusters setup.
+
+5. Navigate back to `infra` folder
+
+```sh
+cd ../..
+```
 
 ## Create Dataproc cluster
 
@@ -100,8 +109,13 @@ cd terraform/dataproc
 
 ```sh
 [[ $CLOUD_SHELL ]] || gcloud auth application-default login
+```
 
+```sh
 export PROJECT=YOUR_PROJECT
+```
+
+```sh
 export TF_VAR_project=${PROJECT}
 gcloud config set project ${PROJECT}
 ```
@@ -116,6 +130,12 @@ terraform init -backend-config="bucket=TFSTATE_BUCKET"
 
 ```sh
 terraform apply
+```
+
+5. Navigate back to `infra` folder
+
+```sh
+cd ../..
 ```
 
 ## Create Composer cluster
@@ -132,8 +152,13 @@ cd terraform/composer
 
 ```sh
 [[ $CLOUD_SHELL ]] || gcloud auth application-default login
+```
 
+```sh
 export PROJECT=YOUR_PROJECT
+```
+
+```sh
 export TF_VAR_project=${PROJECT}
 gcloud config set project ${PROJECT}
 ```
@@ -148,4 +173,10 @@ terraform init -backend-config="bucket=TFSTATE_BUCKET"
 
 ```sh
 terraform apply
+```
+
+5. Navigate back to `infra` folder
+
+```sh
+cd ../..
 ```
