@@ -86,6 +86,11 @@ resource "google_dataproc_cluster" "procamp_cluster" {
       timeout_sec = 600
     }
 
+    initialization_action {
+      script      = "gs://procamp-infra/initialization-actions/bigdata-procamp/procamp.sh"
+      timeout_sec = 600
+    }
+
     endpoint_config {
       enable_http_port_access = true
     }
