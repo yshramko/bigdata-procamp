@@ -27,7 +27,7 @@ resource "google_dataproc_cluster" "procamp_cluster" {
 
     master_config {
       num_instances = 1
-      machine_type  = "n1-standard-2"
+      machine_type  = "n1-standard-4"
       disk_config {
         boot_disk_size_gb = 100
         num_local_ssds    = 0
