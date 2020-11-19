@@ -38,7 +38,7 @@ The goal is to write the BitCoins Transactions data to Kafka, then read this dat
 3. Consumer side.
     - implement using your language of choice
     - at least once delivery semantics is implemented
-    - compute top 10 bitcoin transactions based on `price` field (ascending) and print them to std out
+    - compute top 10 bitcoin transactions based on `price` field (descending) and print them to std out
         - maintain a collection of top 10 transactions from the beginning
         - after each consumer poll update this collection
         - after the update, print collection to the std out.
