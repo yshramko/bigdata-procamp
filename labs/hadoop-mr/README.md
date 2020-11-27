@@ -57,5 +57,4 @@ In order to reasseble an application jar you need:
 ### Tasks
 
 1. Find top 5 airlines with the greatest average DEPARTURE_DELAY. Show Airline code (IATA_CODE), Airline Name and average DEPARTURE_DELAY
-
-
+2. Unit tests will give you extra points
