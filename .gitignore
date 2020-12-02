@@ -1,5 +1,6 @@
 # Project specific
-.idea/**
+**/.idea/**
+*.iml
 .venv/**
 venv/**
 .creds/**
@@ -169,3 +170,6 @@ override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+
+# Mac
+.DS_Store
