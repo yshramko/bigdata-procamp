@@ -19,6 +19,10 @@ resource "google_composer_environment" "procamp_env" {
     software_config {
       image_version  = var.composer_image_version
       python_version = 3
+
+      airflow_config_overrides = {
+        core-load_example = "True"
+      }
     }
   }
 }
