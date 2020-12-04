@@ -53,6 +53,12 @@ In order to reasseble an application jar you need:
 - Download [source data](https://www.kaggle.com/usdot/flight-delays)
 - Upload extracted data to the created Cloud Storage bucket in some folder
 - Check out URI to the files (ie `gs://globallogic-procamp-bigdata-datasets/2015_Flight_Delays_and_Cancellations/flights.csv`)
+- ssh to Hadoop master node
+
+  > `gcloud compute ssh procamp-cluster-m --zone=us-east1-b --project=[YOUR PROJECT ID]`
+
+- Use `hadoop discp` or `hadoop fs -cp` or `hdfs dfs -cp` to copy the data from Cloud Storage to Hadoop (Dataproc) HDFS
+- Don't forget to experiment with all the commands from the lecture
 
 ### Tasks
 
