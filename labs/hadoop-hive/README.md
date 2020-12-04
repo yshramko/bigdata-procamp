@@ -6,16 +6,16 @@
 - You have created a [Dataproc cluster](https://github.com/gl-bigdata-procamp/bigdata-procamp/blob/master/infra/README.md#create-dataproc-cluster)
 - Your Dataproc cluster is up and running
  
-## How to connect to Hive CLI
+## How to connect to Hive
 
 1. Start GCP console (if you don't have GCP CLI on your host machine)
 2. Connect to your Dataproc cluster master node 
 
-  >  \> git push --set-upstream origin HF-HIVE-1`gcloud compute ssh procamp-cluster-m --zone=us-east1-b --project=[YOUR PROJECT ID]`
+  >  \> `gcloud compute ssh procamp-cluster-m --zone=us-east1-b --project=[YOUR PROJECT ID]`
 
 **Note**: It is supposed your Dataproc cluster name is `procamp-cluster` and zone `us-east1-b`
 
-3. Launch Hive CLI
+3. Use Hive CLI to start Hive session
 
  > \> hive
 
