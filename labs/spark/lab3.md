@@ -1,5 +1,12 @@
 ## Spark Structured Streaming Lab
 
+## Prerequisites
+
+- You have created a [GCP project](https://github.com/gl-bigdata-procamp/bigdata-procamp/blob/master/infra/README.md#create-google-cloud-project)
+- You have created a [Dataproc cluster](https://github.com/gl-bigdata-procamp/bigdata-procamp/blob/master/infra/README.md#create-dataproc-cluster)
+- You have finished both [Nifi](https://github.com/gl-bigdata-procamp/bigdata-procamp/tree/master/labs/nifi) and [Kafka](https://github.com/gl-bigdata-procamp/bigdata-procamp/blob/master/labs/kafka/lab1.md) labs
+- Your Dataproc cluster with NiFi and Kafka is up and running
+
 ### Overview
 The task is to create Spark Streaming Job, which reads data from Kafka topic, executes windowed aggregation query on the data and writes result into the GCP Storage Bucket
 
@@ -31,6 +38,6 @@ Allowed latency - 3 minutes
 gcloud dataproc jobs submit pyspark lab_streaming.py --cluster=procamp-cluster --region=us-east1 --properties spark.jars.packages=org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.7 -- procamp_labs_materials streaming_result btc
  </code>    
 
-<br/>Where `procamp_labs_materials` is a name of bucket, `streaming_result` is a folder withing bucket and `btc` is a topic to read.
+<br/>Where `procamp_labs_materials` is a name of bucket, `streaming_result` is a folder within bucket and `btc` is a topic to read.
 
 Please pay attention for the version of spark-sql-kafka library - it should match with version of the Spark installed on your DataProc cluster
