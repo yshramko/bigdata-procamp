@@ -1,4 +1,4 @@
- # Spark Lab 1
+ # Spark Lab 2: DataFrames
  
 ## Prerequisites
 
@@ -75,6 +75,8 @@
  > Reminder: Don't forget to recall the commands from the first lecture on Hadoop fundamentals
 
 ### Tasks
+
+Using DataFrame / DataSet API:
 
 1. Find the most popular destination airport in each month and save to hdfs in TSV format. Record should contain the destination airport name and number of visits. Gather statistics per each of the airports for debugging
 2. Calculate percentage of canceled flights per origin airport per airline. Save the result to HDFS in json format sorted by airline name and percentage for all airports but 'Waco Regional Airport' which shold be stored in CSV format. Record should contain airline name, origin airport name, percentage, number of canceled flights, number of processed flights. Gather total number of flights  per airline for debbuging
