@@ -64,19 +64,10 @@
 - Download [source data](https://www.kaggle.com/usdot/flight-delays)
 - Upload extracted data to the created Cloud Storage bucket in some folder
 - Check out URI to the files (ie `gs://globallogic-procamp-bigdata-datasets/2015_Flight_Delays_and_Cancellations/flights.csv`)
-- Ssh to Hadoop master node
-
-  > `gcloud compute ssh procamp-cluster-m --zone=us-east1-b --project=[YOUR PROJECT ID]`
-
-- Copy the data from Cloud Storage to Hadoop (Dataproc) HDFS 
-
- > Hint: Use `hadoop discp` or `hadoop fs -cp` or `hdfs dfs -cp`
-
- > Reminder: Don't forget to recall the commands from the first lecture on Hadoop fundamentals
 
 ### Tasks
 
 Using DataFrame / DataSet API:
 
-1. Find the most popular destination airport in each month and save to hdfs in TSV format. Record should contain the destination airport name and number of visits. Gather statistics per each of the airports for debugging
-2. Calculate percentage of canceled flights per origin airport per airline. Save the result to HDFS in json format sorted by airline name and percentage for all airports but 'Waco Regional Airport' which shold be stored in CSV format. Record should contain airline name, origin airport name, percentage, number of canceled flights, number of processed flights. Gather total number of flights  per airline for debbuging
+1. Find the most popular destination airport in each month and save to the Google Cloud Storage bucket in TSV format. Record should contain the destination airport name and number of visits. Gather statistics per each of the airports for debugging
+2. Calculate percentage of canceled flights per origin airport per airline. Save the result to the GCS bucket in json format sorted by airline name and percentage for all airports but 'Waco Regional Airport' which should be stored in CSV format. Record should contain airline name, origin airport name, percentage, number of canceled flights, number of processed flights. Gather total number of flights  per airline for debugging
