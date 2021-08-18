@@ -1,4 +1,4 @@
- # Spark Lab 2: DataFrames
+ # Spark Lab 1: DataFrames
  
 ## Prerequisites
 
