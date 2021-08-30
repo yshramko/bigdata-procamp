@@ -4,7 +4,7 @@ In this lab you will make flat star schema ER-diagram.
 
 Use flight delays https://www.kaggle.com/usdot/flight-delays?select=flights.csv to make initial analysis
 
-## Exercise: Create diagram##
+## Exercise: Create diagram
 
 Use tool of your preference (draw.io is recommended) to make a ER-diagram.
 Follow the next rules:
