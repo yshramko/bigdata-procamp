@@ -8,6 +8,4 @@ Folder structure on local file system: /home/nifi/yyyy-MM-dd-HH-mm
 
 Please send a link to your github repo with results (xml template) to the big-data-program@globallogic.com email address with the "HW2" text in the header
 
-The deadline for this task by 23/11/2020
-
 Good luck!
