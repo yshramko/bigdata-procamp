@@ -2,7 +2,7 @@
 
 Apache NiFi. Apache NiFi is a software project from the Apache Software Foundation designed to automate the flow of data between software systems.
 
-In this lab you will connect to [bitstamp.net](https://bistamp.net) WebSocket to consume bitcoin live orders.
+In this lab you will connect to [bitstamp.net](https://bistamp.net) WebSocket to consume bitcoin live orders using WebSocket API https://www.bitstamp.net/websocket/v2/
 
 ## Objectives ##
 - explore NiFi on a DataProc clsuter
