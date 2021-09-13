@@ -2,7 +2,7 @@
 
 Apache NiFi. Apache NiFi is a software project from the Apache Software Foundation designed to automate the flow of data between software systems.
 
-In this lab you will connect to [bitstamp.net](https://bistamp.net) WebSocket to consume bitcoin live orders.
+In this lab you will connect to [bitstamp.net](https://bistamp.net) WebSocket to consume bitcoin live orders using WebSocket API https://www.bitstamp.net/websocket/v2/
 
 ## Objectives ##
 - explore NiFi on a DataProc clsuter
@@ -16,10 +16,10 @@ In this lab you will connect to [bitstamp.net](https://bistamp.net) WebSocket to
 
 1. Go to your DataProc cluster, WEB INTERFACES tab, then "Create an SSH tunnel to connect to a web interface"
 ![](images/0001.png)
-2. Choose your host OS on a laptop from the tabs: "Linux\MacOS\Windows" and excute command under "Create an SSH tunnel using local port 1080"
+2. Choose your host OS on a laptop from the tabs: "Linux\MacOS\Windows" and execute command under "Create an SSH tunnel using local port 1080"
 3. Run command under "Run Chrome and connect through the proxy"
 NB! For the x64 Windows please replace "%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^"
-with ""C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" ^"
+with ""C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" ^" or ""C:\Program Files\Google\Chrome\Application\chrome.exe" ^" (depends on Chrome version)
 
 This would open web UI on the port 8088. Edit your browser navigation URL with the port 8081.
 

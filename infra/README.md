@@ -26,7 +26,7 @@ If you'd prefer to follow this tutorial on your local machine, you can follow [t
 
 ## Installing Terraform
 
-Terraform is already install in your Cloud Shell environment. You can verify this by running:
+Terraform is already installed in your Cloud Shell environment. You can verify this by running:
 
 ```bash
 terraform --version
@@ -38,10 +38,12 @@ If you'd like to install Terraform on your local machine, you can [follow the in
 
 When running the previous command, you may see a warning that there is a newer version of Terraform available. This guide has been tested with the version of Terraform installed in your Cloud Shell environment, so please continue to use it for the rest of the guide.
 
-## Installing Google Cloud SDK (optional)
+## Installing Google Cloud SDK
 
-You can run terraform scripts from your local machine instead of using Google Cloud Shell. If you prefer to proceed
-with you would nee to install Google Cloud SDK by [following the the instructions here](https://cloud.google.com/sdk/docs/install).
+You need to install Google Cloud SDK by [following the the instructions here](https://cloud.google.com/sdk/docs/install) to connect to the NiFi cluster from your local machine browser.
+
+### This part is optional
+You can run terraform scripts from your local machine instead of using Google Cloud Shell.
 
 After you install Cloud SDK, the next step is to run the `gcloud init` command to perform initial setup steps.  Pick `bigdata-procamp` as cloud project to use when prompted.
 

@@ -70,7 +70,7 @@ function install_and_configure_nifi() {
     install_apt_get jq xmlstarlet procps
 
     # Download, validate, and expand Apache NiFi Toolkit binary.
-    wget -nv --timeout=30 --tries=5 --retry-connrefused \
+    wget -nv --timeout=1200 --tries=5 --retry-connrefused \
         ${BASE_URL}/${NIFI_TOOLKIT_BINARY_PATH} \
         -O ${NIFI_BASE_DIR}/nifi-toolkit-${NIFI_VERSION}-bin.tar.gz
     echo "$(curl ${BASE_URL}/${NIFI_TOOLKIT_BINARY_PATH}.sha256) *${NIFI_BASE_DIR}/nifi-toolkit-${NIFI_VERSION}-bin.tar.gz" | sha256sum -c -
@@ -81,7 +81,7 @@ function install_and_configure_nifi() {
     chown -R nifi.nifi ${NIFI_TOOLKIT_HOME}
 
     # Download, validate, and expand Apache NiFi binary.
-    wget -nv --timeout=30 --tries=5 --retry-connrefused \
+    wget -nv --timeout=1200 --tries=5 --retry-connrefused \
         ${BASE_URL}/${NIFI_BINARY_PATH} \
         -O ${NIFI_BASE_DIR}/nifi-${NIFI_VERSION}-bin.tar.gz
     echo "$(curl ${BASE_URL}/${NIFI_BINARY_PATH}.sha256) *${NIFI_BASE_DIR}/nifi-${NIFI_VERSION}-bin.tar.gz" | sha256sum -c -
