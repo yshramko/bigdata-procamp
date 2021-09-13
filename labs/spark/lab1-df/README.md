@@ -41,7 +41,7 @@
  
  
  
- ## How to connect to submit a Spark job
+ ## How to submit a Spark job from GCP
  
 1. Start GCP console (if you don't have GCP CLI on your host machine)
 2. Connect to your Dataproc cluster master node 
@@ -53,6 +53,10 @@
  > --conf spark.yarn.appMasterEnv.SPARK_HOME=/dev/null \
  > --conf spark.executorEnv.SPARK_HOME=/dev/null \
  > --files  /home/user/script.py
+
+
+ ## How to submit a Spark job from local machine
+ > gcloud dataproc jobs submit pyspark lab1.py --cluster=test-procamp-cli2 --region=us-central1 -- procamp_labs_materials
 
 ## Lab Homework
 
