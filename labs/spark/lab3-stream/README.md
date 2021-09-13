@@ -1,4 +1,4 @@
-## Spark Structured Streaming Lab
+# Spark Lab 3: Structured Streaming
 
 ## Prerequisites
 
