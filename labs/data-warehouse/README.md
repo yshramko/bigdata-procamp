@@ -12,4 +12,4 @@ Follow the next rules:
 2. Diagram has to have no complex/custom data types
 3. Final design has to follow star schema principles
 
-Send URL to your ER-diagram/or send a screenshot of the drawing to the big-data-program@globallogic.com address with the "HW1" text in the header
+Send URL to your ER-diagram/or send a screenshot of the drawing to the email address given at communication channel with the "HW1" text in the header
