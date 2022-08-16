@@ -40,7 +40,7 @@ When running the previous command, you may see a warning that there is a newer v
 
 ## Installing Google Cloud SDK
 
-You need to install Google Cloud SDK by [following the the instructions here](https://cloud.google.com/sdk/docs/install) to connect to the NiFi cluster from your local machine browser.
+You need to install Google Cloud SDK by [following the instructions here](https://cloud.google.com/sdk/docs/install) to connect to the NiFi cluster from your local machine browser.
 
 ### This part is optional
 You can run terraform scripts from your local machine instead of using Google Cloud Shell.
