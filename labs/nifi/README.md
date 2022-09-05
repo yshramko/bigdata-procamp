@@ -50,6 +50,11 @@ Truststore Type     | JKS
 
 ![](images/006.png)
 
+In case of problems with truststore try to generate it once again with the following commands:
+```openssl s_client -connect ws.bitstamp.net:443 2>/dev/null </dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > bitstamp.pem
+keytool -import -file bitstamp.pem -storetype JKS -keystore bitstamp.truststore
+```
+
 4. Add **JettyWebSocketClient** service. Configure it with any name and set the following properties:
 
 Property            | Value
