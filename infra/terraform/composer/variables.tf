@@ -11,5 +11,5 @@ variable "project" {
 }
 
 variable "composer_image_version" {
-  default = "composer-1.19.6-airflow-1.10.15"
+  default = "composer-2.4.2-airflow-2.5.3"
 }
