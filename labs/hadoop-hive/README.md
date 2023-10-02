@@ -43,8 +43,6 @@
 
  > Hint: Use `hadoop discp` or `hadoop fs -cp` or `hdfs dfs -cp`
 
- > Reminder: Don't forget to recall the commands from the first lecture on Hadoop fundamentals
-
 ### Tasks
 
 1. Find top 5 airlines with the greatest average DEPARTURE_DELAY. Show Airline code (IATA_CODE), Airline Name and average DEPARTURE_DELAY and save the result in another Hive table
