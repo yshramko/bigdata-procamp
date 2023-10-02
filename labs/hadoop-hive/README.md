@@ -31,8 +31,6 @@
 
 ### Prepare data
 
- > Note: you can skip all or some of the steps if you have done that with Hadoop MapReduce lab and have the data available on Dataproc HDFS
-
 - Create a [Cloud Storage](https://cloud.google.com/storage/docs/creating-buckets) bucket 
 - Download [source data](https://www.kaggle.com/usdot/flight-delays)
 - Upload extracted data to the created Cloud Storage bucket in some folder
