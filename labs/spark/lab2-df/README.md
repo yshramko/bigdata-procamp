@@ -1,9 +1,9 @@
-# Spark Lab 2: Key Concepts and Optimization
+# Spark Lab 2: Databricks
 
 ## Prerequisites
 
 - You have created a [Community Databricks Account](https://community.cloud.databricks.com/login.html)
-    - Navigate to https://www.databricks.com/ -> Click "Try Databrick" -> Fill out the form and click "Continue" -> Click on ""Get Started With Community Edition"
+    - Navigate to https://www.databricks.com/ -> Click "Try Databrick" -> Fill out the form and click "Continue" -> Click on "Get Started With Community Edition"
 - You have created a Databricks cluster in your Databricks Community Edition
 - Your Databricks cluster is up and running
 
@@ -15,7 +15,7 @@ The task is to create a production-level Spark job in the form of a Databricks n
 
 - Download [source data](https://www.kaggle.com/usdot/flight-delays)
 - For flights.csv file, extract some sample of the data (to do not overload the free version of Databricks)
-- Upload extracted data to the Databricks in some folder
+- Upload extracted data to the Databricks in some folder (use sampled flights.csv instead of the original one)
 - Check out URI to the files (ie `/FileStore/table/flights.csv`)
 
 ### Task Description
@@ -24,7 +24,7 @@ As a Data Engineer on a Next-Gen Data Platform, which is based on Spark, you hav
 2. Migrate data aggregation job from legacy BlueShift Data Warehouse to Next Gen Data Platform
 3. Your task is to translate the SQL statements of the legacy job to Spark code, following best practices in terms of code structure and job performance
 4. All requirements you have - the SQL Query itself.
-5. Consumers of your results - other Spark jobs in form of Databricks notebook
+5. Consumers of your results - other Spark jobs in the form of Databricks notebook
 6. Corresponding data is ingested as CSV files (see Prepare Data section above) that have the following mapping to the legacy tables:
     1. FLIGHTS table - flights.csv file
     2. AIRPORTS table - airports.csv file
