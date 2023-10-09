@@ -1,0 +1,89 @@
+CREATE DATABASE flights;
+
+### adding airlines table to flights
+CREATE TABLE IF NOT EXISTS flights.airlines (
+ IATA_CODE string,
+ AIRLINE string )
+ COMMENT 'Airlines Info Table'
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY ',';
+ 
+ DESCRIBE FORMATTED flights.airlines;
+ 
+ LOAD DATA INPATH '/user/data/flights/airlines.csv' INTO TABLE flights.airlines;
+ 
+ ### adding airports table to flights
+ SELECT * FROM flights.airlines;
+ 
+ CREATE TABLE flights.airports (
+ IATA_CODE string, 
+ AIRPORT string, 
+ CITY string,
+ STATE string, 
+ COUNTRY string, 
+ LATITUDE decimal(10,5),
+ LONGITUDE decimal(10,5) )
+ COMMENT 'Airports Info Table'
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY ',';
+ 
+ LOAD DATA INPATH '/user/data/flights/airports.csv' INTO TABLE flights.airports;
+ 
+ DESCRIBE FORMATTED flights.airports;
+ 
+ ### adding airports table to flights
+ CREATE TABLE flights.flights (
+ YEAR smallint,
+ MONTH smallint,  
+ DAY smallint,
+ DAY_OF_WEEK smallint,
+ AIRLINE string,
+ FLIGHT_NUMBER smallint,
+ TAIL_NUMBER string,
+ ORIGIN_AIRPORT string,
+ DESTINATION_AIRPORT string,
+ SCHEDULED_DEPARTURE string,
+ DEPARTURE_TIME string,
+ DEPARTURE_DELAY smallint,
+ TAXI_OUT smallint,
+ WHEELS_OFF string,
+ SCHEDULED_TIME smallint,
+ ELAPSED_TIME smallint,
+ AIR_TIME smallint,
+ DISTANCE integer,
+ WHEELS_ON string,
+ TAXI_IN smallint,
+ SCHEDULED_ARRIVAL string,
+ ARRIVAL_TIME string,
+ ARRIVAL_DELAY smallint,
+ DIVERTED tinyint,
+ CANCELLED tinyint,
+ CANCELLATION_REASON string,
+ AIR_SYSTEM_DELAY smallint,
+ SECURITY_DELAY smallint,
+ AIRLINE_DELAY smallint,
+ LATE_AIRCRAFT_DELAY smallint,
+ WEATHER_DELAY smallint)
+ COMMENT 'Flight Delays and Cancellations Table'
+ ROW FORMAT DELIMITED
+ FIELDS TERMINATED BY ',';
+ 
+ DESCRIBE FORMATTED flights.flights;
+  
+ LOAD DATA INPATH '/user/data/flights/flights.csv' INTO TABLE flights.flights;
+ 
+ ### creating flights.top_departure_delay_airlines table
+ create table flights.top_departure_delay_airlines as
+ select f.AIRLINE as airline_code, a.AIRLINE as airline_name, avg_departure_delay 
+   from 
+   (select airline, avg(abs(departure_delay)) avg_departure_delay
+   from flights.flights
+   group by airline
+   order by avg_departure_delay DESC
+   limit 5) f 
+   left join flights.airlines a on f.AIRLINE = a.IATA_CODE
+   order by avg_departure_delay DESC;
+   
+   DESCRIBE FORMATTED flights.top_departure_delay_airlines;
+   
+   select * from flights.top_departure_delay_airlines;
